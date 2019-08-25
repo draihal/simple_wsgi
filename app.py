@@ -12,14 +12,25 @@ from api import API
 app = API()
 
 
-@app.route("/home")
-def home(request, response):
-    response.text = "Hello from the HOME page."
+# @app.route("/home")
+# def home(request, response):
+#     response.text = "Hello from the HOME page."
+#
+#
+# @app.route("/about")
+# def about(request, response):
+#     response.text = "Hello from the ABOUT page."
+
+def handler(req, resp):
+    resp.text = "Hello from the HOME page."
 
 
-@app.route("/about")
-def about(request, response):
-    response.text = "Hello from the ABOUT page."
+def handler2(req, resp):
+    resp.text = "Hello from the INDEX page."
+
+
+app.add_route("/home", handler)
+app.add_route("/", handler2)
 
 
 @app.route("/hello/{name}")
@@ -27,14 +38,14 @@ def greeting(request, response, name):
     response.text = f"Hello, {name}."
 
 
-@app.route("/tell/{age:d}")
+@app.route("/age/{age:d}")
 def greeting(request, response, age):
     response.text = f"Your age are {age}."
 
 
-@app.route("/book")
-@app.route("/book/")
-class BooksResource:
+@app.route("/test")
+@app.route("/test/")
+class TestResource:
     def get(self, req, resp):
-        resp.text = "Books Page"
+        resp.text = "Test Page"
 
