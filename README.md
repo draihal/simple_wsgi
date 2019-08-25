@@ -3,6 +3,13 @@
 ## Description
 > This is a Python Web Framework built for learning. 
 It is a WSGI framework and can be used with any WSGI application server such as Gunicorn.
+```
+pip install gunicorn
+```
+And then start the server:
+```
+gunicorn app:app (for example)
+```
 
 ## Installation
 
