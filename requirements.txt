@@ -1,3 +1,4 @@
 gunicorn ~= 19.9.0
 webob ~= 1.8.5
 parse ~= 1.12.1
+Jinja2 ~= 2.10.1

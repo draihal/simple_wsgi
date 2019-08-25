@@ -49,3 +49,10 @@ class TestResource:
     def get(self, req, resp):
         resp.text = "Test Page"
 
+@app.route("/template")
+def template_handler(req, resp):
+    resp.body = app.template(
+        "index.html",
+        context={"title": "WSGI Framework", "body": "Testing template with jinja."}
+    ).encode()
+
