@@ -30,7 +30,7 @@ python setup.py install
 ```
 to uninstall:
 ```
-pip uninstall code_analyzer
+pip uninstall simple_wsgi
 ```
 
 ## Usage example
