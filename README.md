@@ -35,8 +35,7 @@ pip uninstall simple_wsgi
 
 ## Usage example
 ```python
-from api import API
-
+from simple_wsgi import API
 app = API()
 
 

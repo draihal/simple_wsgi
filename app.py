@@ -1,5 +1,4 @@
-from api import API
-
+from simple_wsgi import API
 app = API()
 
 
